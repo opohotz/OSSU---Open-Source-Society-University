@@ -1,0 +1,59 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname |Strings_and_Images - Baldi's_Basics|) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+(require 2htdp/image)
+
+(scene+curve
+  (overlay
+    (overlay/offset
+      (overlay
+        (circle 10 "solid" "black")
+        (circle 20 "solid" "white"))
+      80 0
+      (overlay
+        (circle 10 "solid" "black")
+        (circle 20 "solid" "white")))
+
+    (overlay/offset
+      (triangle 30 "solid" "brown")
+      0 -10
+      (circle 70 "solid" "tan")))
+  0 0 0 -1
+  150 60 70 1
+  "red")
+
+(overlay
+  (overlay/offset
+    (rectangle 50 150 "solid" "green")
+    10 0
+    (rectangle 10 150 "solid" "green"))
+
+  (overlay/offset
+    (rectangle 30 150 "solid" "green")
+    100 0
+    (rectangle 30 150 "solid" "green")))
+
+(scene+line
+  (overlay
+    (overlay/offset
+      (rectangle 50 150 "solid" "blue")
+      10 0
+      (circle 20 "solid" "white"))
+
+    (overlay/offset
+      (circle 30 "solid" "white")
+      70 -100
+      (circle 30 "solid" "tan"))
+
+    (overlay/offset
+      (circle 30 "solid" "white")
+      -70 -100
+      (circle 30 "solid" "tan")))
+
+  25 25 100 100
+  (make-pen "goldenrod" 30 "solid" "round" "round"))
+
+(overlay/offset
+  (circle 10 "solid" "white")
+  52 0
+  (rectangle 70 30 "solid" "brown"))
